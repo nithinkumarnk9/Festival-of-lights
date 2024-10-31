@@ -2,10 +2,443 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>DIWALI</title>
 </head>
-<body>
-<h1>Happy Diwali</h1>
+<style>
+    body {
+    background-color:#000000;
+    }
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
 
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.1); /* Zoom effect on hover */
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .image-container:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay h5 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    .counter {
+    font-size: 2.5rem;
+    padding-right: 50px;
+    font-weight: bold;
+    color: #007bff;
+    }
+    .counter-container {
+    text-align: center;
+    padding-left: 100px 0;
+    }
+    .custom-shadow {
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .custom-shadow:hover {
+    transform: scale(1.05);
+    box-shadow: 15px 15px 45px rgba(0,0,0,0.5);
+    }
+    .content-section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    }
+    image-side img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    }
+    h1 {
+    padding-right: 80px;
+    }
+    .round-card {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    }
+    .round-card:hover {
+    transform: scale(1.05);
+    }
+    .card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    }
+    h1 {
+    color: white;
+    font-family:Courier New;
+    }
+    h2 {
+    font-family: Garamond;
+    }
+    p {
+    color: white;
+    font-family: georgia;
+    }
+</style>
+<body>
+<header class="container mt-5">
+    <h1 class="text-center">WELCOME TO DIWALI CELEBRATED</h1>
+    <p class="lead">Diwali, festivals of light, brings joy and togetherness. Celebrated millions worldwide, its marks victory of light over darkness and good over evil.</p>
+<div class="container py-3">
+  <div class="row g-4">
+    <!-- First Image -->
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0faxHgB-jjAJbloBoLiKM1fyDjadStivgkola04Mrhr-3t4CPsm6oi7WUSVMLodfKyWWbfnG6_rzILnbfFtU8Z4GezRaPs9yqGn4MJBmU_vfAerVv7FEa66WH7rtJ_F84dINY_Sa_2NZb-3Mz_0Z-LqIQjZ_7zwyL63BSxKezvxt7WqNOivfpqmFOehRK/s1247/59e5f41dfb778571a6547934_407f7d2c-d7b8-498a-8831-f2e307fae876.jpg" alt="Image 1">
+        <div class="overlay">
+          <h5>FESTIVAL OF LIGHT</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Image -->
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmtXzi-W7OnK_menHY4BRBBi1z5YGGS-EqAcSH8aBJx4C3g1pqf6EajVYPslAX6V0NicrvaKRX1kYpuDaURpWCFAn_ADaJ4jRTH8nWHh8JwEDU7GDo_LYtZIzlBeW8bifKseSMmFkNgB5K2g3tQZ7GM0RcsJMyGZW_WGutYxz-j6SWlXLfMwwHnipP_lre/s826/1729746604-0937.webp" alt="Image 2">
+        <div class="overlay">
+          <h5>A SKY FULL OF FIREWORKS</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Image -->
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEishh61Ub5Lr5oCfbpJutmI9V36JDZqk8gfuBaLOKZ6AGxnAdyzAZQMvn4bn_pNdg7ZYP6cldNOtY2pnLtCp412gmieAOOnhL6mH05l5T5-hcqVG6j1S4IKXWCj0WBNTE_CZgZqW97v3WrGw-Fbv9r4jPAZGhr7WJ1z66MStVoY_9y9ZgBp91u2OMu9jgpj/s300/images%20%2817%29.jpeg" alt="Image 3">
+        <div class="overlay">
+          <h5>Mountain View</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+<div class="container py-3">
+    <div class="row text-center g-4">
+        <div class="co-md-3">
+            <div class="counter-container">
+                <span class="counter" data-target="1500">95%</span>
+                <p>HINDUS</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="counter-container">
+                <span class="counter" data-target="3000">18%</span>
+                <p>CHRISTIAN</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="counter-container">
+                <span class="counter" data-target="5000">10%</span>
+                <p>MUSLIMS</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="counter-container">
+                <span class="counter" data-target="3000">5%</span>
+                <p>OTHERS</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About us -->
+<div class="container-fluid">
+    <div class="row content-section">
+        <!-- Image Side -->
+        <div class="col-md-6 image-side p-5">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjf8F4dciCPpl7YGjuZzYYZ60Pi0YwnIjiqxzr6aZ823For3r5-Ksvq0T8nmAIZ9E4mAetMDiDeXBX8EzCX5qvqJkrehviFlT1K-tJcDS-JewJ3gNe9hWK1qGREToldMrEpmcYlQfr6txC4ycQwOXhyS2QQPdmQG3LxTCjHZ2KH9ZXo9UKmDDGKhJT5fcZ0/s1211/Happy-Diwali-Wishes.jpg" class="img-fluid custom-shadow" alt="Sample Image">
+        </div>
+        <!-- Content/Text Side -->
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <div class="p-6">
+                <h1 class="display-5">DIWALI FESTIVAL OF LIGHTS</h1>
+                <p class="lead">Diwali, also known as the Festival of Lights, is one of the most widely celebrated festivals in india and across the world. It spans five days, each holding deep significance rooted in Hindu mythology and traditions. Let's explore each day of Diwali and its stories, customs, and traditions.
+                <a href="{{ url_for('about') }}" class="btn btn-primary btn-lg">Learn More</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Gallery -->
+<div class="container">
+  <h2 class="text-center mb-4 text-white">GALLERY</h2>
+  <div class="row g-4">
+    <!-- First Image -->
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQazNVj1k120iq2i-0ggh0aPkJYQY56oGl47EPwD_IIF-V7LZEbrEFjtIxS3YJ502YuWcfjzCfL3Rah_UCTIc9kdKQa4hFlyMpCQEhmVqfylCOYQY3YxUq2Wuc-QtmFoy1CitId2rfCey0hmCjQ4W9dBEtERWzjx7FddKalKJsW-DI6JaSFIBrfolWQlGU/s1600/Festivals-in-India-2024-When-is-7.jpg" alt="Image 1">
+        <div class="overlay">
+          <h5></h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Image -->
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjI-gWuKXuMQESvR5UwOgTJr9QO_Qc6I_bIzgjKSAgsRoZnn9KfIwPBTdVhfcM07ILRFAwZ30L1oFpzUlUvy-f6AAXaCszVeMYel1UNXq3Lst_CvzikuJs690IwarQ4FTNFQH6sWkTgS3CNzE82_RMDOBI7Kd6ccJ0X61bU4AmvGuoMDqnkqG0Y7VNjhvF4/s550/Diwali_Deepawali_2024_1729061074719_1729858685246.webp" alt="Image 2">
+        <div class="overlay">
+          <h5></h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Image -->
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEjShPGXHwCsOsCeFS5bQ2d1YKJCRyCdK32nzDLn1rQDnHbkbdd2gKp_8GuN-YehZhNaZw6BumD9xy9_AaTSqS0u0qjypwvIBFLWj9qZBJ90Dx47V4_d195QZZBaJSYu0JepJtOR5X-rtMnzVepEMtTSNRrrUJc35g6noUwNszGbE4AhCs3NSAaJWN23nH/s1200/New-Project-49_66ea796b50c28.webp" alt="Image 3">
+        <div class="overlay">
+          <h5></h5>
+        </div>
+      </div>
+    </div>
+       <div class="col-md-4">
+      <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVj7xHNMrsMqH4l8ftk6Rkh8XgKWZR_jnkLklSYa7EbWvfAZGQ3IQEklM_fBCDobEQfEuqfzIBeHyY5YMmzzOhgtjGedrdQXDqanY8Q9MBYFHhOjo9HVvhgY3b2ixHItGHnSiHn8Na-7boMPsT3xpmV7N35IFxhiJnIkHUDQjXWGqp8gUBxj2EUkXhkzBC/s1024/diwali-2024-creative-activities-for-kids-to-enjoy-during-diwali-vacation-230927196-16x9_0.webp" alt="Image 1">
+        <div class="overlay">
+          <h5></h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Image -->
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEKHonqX5zSKmjAktWZzSjsOmrQvXH7f3bXlLfcVMC5P03NR388G0PHG8V3Lxhp-umyVgHns49mMmRA7YoGmWC6N-x9ZPQeFL3WrvDEbWibnJlWzX6xjfSiF1fodHIy60Xo5Ej9n8Qz5Ksc6madFto2n_-d4ot2hxRFqXiE7hBZxB31ey_eyzwjo-ozJ7N/s549/g36ec1e9b9_1730096356204_1730096356484.webp" alt="Image 2">
+        <div class="overlay">
+          <h5></h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Image -->
+    <div class="col-md-4 p-3">
+      <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikbKvpFPMZ58QP2KOXlyqZwTiWkrXMUdjllYi0cvwIbhTK1Sn3V4NzQUgCwkRRZHEHSAvPD5u2YuHpi3HJGFuh1V-d_JNs03XTtu666cvgwM_ah2CRrSS9oeTvKlxsXa9X-vuUd1C1qa6Y81TD14tDpRcf6JLioTFEbybo5iF5kiVQMpPBO-ANsX7mQ7Dp/s768/istockphoto-1214444978-640x640.jpg" alt="Image 3">
+        <div class="overlay">
+          <h5></h5>
+        </div>
+      </div>
+    </div>
+       <div class="col-md-4 p-3">
+      <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMI1hIYSfciLcySUXss0PVxQWeBQz1WGx0pLHZZ7RADDgmh0blvT4B2f3s4dDKsn8bTbXubwf4GTn6d2VfBMmplOn6JpTMkY3dVBliSfG_moxTpsZg2kBcA38iwq3JSrYgD9iBNZF5MksikwmLUlAPUSeRlYYiAc7Hik_SaGy_ZzD20vzwDA5SOHF_XjzF/s744/Diwali-Celebration-Page_hero_2115x1080-744x380.jpg" alt="Image 1">
+        <div class="overlay">
+          <h5></h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Image -->
+    <div class="col-md-4 p-3">
+      <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8Hl-6BgVt_eyZ0h-ZxiDAmchN6sUe3ZxF_xGWJlgueA6x8Ad1qZTjv2y9zbj-uci0YMayL6exMLwDwr3ntNW9cFlPLM01V6xYigWv-gjQfnKxpmilT0Db2a3LgFUSiYtW2mHrvmDxzdrUT7o_Dt4GfbBJpjGl5ugxHxzi4rov5DO0_WXSzW4FfJexpLpW/s1384/diwali-messages-.webp" alt="Image 2">
+        <div class="overlay">
+          <h5></h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Image -->
+    <div class="col-md-4 p-3">
+      <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5dNApVbcEpC6_qmzKpWRH2mt6UYPZMSqbUXjnlebfjg10WdI8EQAiVx7uBJmH-49dISGEtHwg5aQc_XNjnqRRUFCUvgOIg32VzOYV5pEu-DxONnSWJ_4VaWBWg1vB_fksz8LVoyC4APdyX8zjnVxk5B990uQLLeVqw6U3mT0_4jTt9mLXffTAlcNqZ3v_/s300/images%20%2818%29.jpeg" alt="Image 3">
+        <div class="overlay">
+          <h5></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- USES -->
+ <div class="container mt-5">
+  <div class="row g-4">
+
+    <!-- Success Card -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card text-white bg-success mb-3 custom-shadow">
+        <div class="card-header">Celebration of Cultural and Spiritual Values</div>
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text">Diwali celebrates the triumph of light over darkness and good over evil, symbolized by stories like Lord Rama's return to Ayodhya and the victory of Lord Krishna over Narakasura. These stories reinforce cultural heritage and spiritual values, encouraging people to reflect on themes of virtue, kindness, and renewal.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Warning Card -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card text-dark bg-warning mb-3 custom-shadow">
+        <div class="card-header">Strengthening Family and Community Bonds</div>
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text">Diwali is a time for family and community gatherings, where people come together to clean and decorate their homes, prepare festive meals, and participate in prayers. The festival encourages bonding and unity, as families and friends exchange gifts, share sweets, and celebrate together.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info Card -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card text-white bg-info mb-3 custom-shadow">
+        <div class="card-header">Economic and Charitable Impact</div>
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text">Diwali boosts local economies, as people shop for clothing, jewelry, decorations, and gifts. It's also a time when many engage in acts of charity, donating to those in need and sharing festive joy with the community. </p>
+        </div>
+      </div>
+    </div>
+<!-- FAQ -->
+<div class="container my-5">
+    <h2 class="text-center text-light">Frequently Asked Questions</h2>
+    <div class="faq-item card bg-Warning  mt-4" data-index="0">
+      <div class="card-header">
+        <h5 class="mb-0">
+          <button class="btn btn-link question" data-index="0">What is Diwali?</button>
+        </h5>
+      </div>
+      <div class="card-body answer" data-index="0">
+        Diwali, also known as the Festival of Lights, is an ancient Hindu festival celebrated in autumn.
+      </div>
+    </div>
+
+    <div class="faq-item card bg-success mt-4" data-index="1">
+      <div class="card-header">
+        <h5 class="mb-0">
+          <button class="btn btn-link question" data-index="1">Why is Diwali celebrated?</button>
+        </h5>
+      </div>
+      <div class="card-body answer" data-index="1">
+        Diwali celebrates the victory of light over darkness, knowledge over ignorance, and good over evil.
+      </div>
+    </div>
+
+    <div class="faq-item card bg-info mt-4" data-index="2">
+      <div class="card-header">
+        <h5 class="mb-0">
+          <button class="btn btn-link question" data-index="2">When is Diwali celebrated?</button>
+        </h5>
+      </div>
+      <div class="card-body answer" data-index="2">
+        Diwali is observed on the 15th day of Kartika, the holiest month in the Hindu lunar calendar, usually between October and November.
+      </div>
+    </div>
+
+    <div class="faq-item card bg-danger mt-4" data-index="3">
+      <div class="card-header">
+        <h5 class="mb-0">
+          <button class="btn btn-white question" data-index="3">How do people celebrate Diwali?</button>
+        </h5>
+      </div>
+      <div class="card-body answer" data-index="3">
+        People celebrate by lighting oil lamps, bursting fireworks, sharing sweets, and praying to the deities.
+      </div>
+    </div>
+  </div>
+<!-- Round cards -->
+      <div class="container mt-5">
+          <div class="d-flex justify-content-center gap-3">
+              <!-- Round Card 1 -->
+              <div class="card round-card bg-secondary">
+                  <div class="card-body">
+                      <h5 class="card-title"></h5>
+                      <p class="card-text">Environmental Pollution</p>
+      </div>
+              </div>
+              <!-- Round Card 2 -->
+              <div class="card round-card bg-warning">
+                  <div class="card-body">
+                      <h5 class="card-title"></h5>
+                      <p class="card-text">Health Risks</p>
+              </div>
+              </div>
+              <!-- Round Card 3 -->
+              <div class="card round-card bg-danger">
+                  <div class="card-body">
+                      <h5 class="card-title"></h5>
+                      <p class="card-text">Financial Pressure</p>
+              </div>
+              </div>
+              <!-- footer -->
+
+       <div class="container mt-5 text-center">
+           <p>&copy; 2024 Happy Diwali. All Rights Reversed.</p>
+       </div>
+<script>
+    document.addEventListener('DOMContentLoaded", () => {
+    const questions = document.querySelectorAll(".question");
+
+    question.foreach(question => {
+    question.addEventListener("click", (event) => {
+    const index = event.target.getAttribute("data-index");
+    const answer = document.querySelector('.answer[data-index="$(index)"]');
+
+    // Toggle answer display
+    answer.style.display = answer.style.display == "block" ? "none"
+    }};
+    });
+    });
+</script>
+<script>
+    // JavaScript for counter animation
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+    const target = +counter.getAttribute('data.target'); // Get the target number
+    const speed = 200; // Adjust speed for smoother animation
+
+    const updateCounter = () => {
+    const value = +counter.innerText; // Current value
+    const increment = target / speed; // Increment step
+
+    if (value < target) {
+    counter.innerText = Math.ceil(value + increment);
+    setTimeout(updateCounter, 20); // Update every 20ms
+    } else {
+    counter.innerText = target; // Final value
+    }
+    };
+    updateCounter(); // Start the counter animation
+    }};
+</script>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
